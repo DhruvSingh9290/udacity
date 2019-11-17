@@ -115,7 +115,7 @@ def time_stats(df):
     litm = 1
 
     print(litm,". ",'Calculating The Most Frequent Times of Travel...\n')
-    start_time = time.time()    
+    start_time = newmethod505()    
     litm = newmethod909(litm)
 
     # TO DO: display the most common month
@@ -145,6 +145,10 @@ def time_stats(df):
 
     print('-'*40)
 
+def newmethod505():
+    start_time = time.time()    
+    return start_time
+
 def newmethod909(litm):
     litm = newmethod550(litm)
     return litm
@@ -160,7 +164,7 @@ def station_stats(df):
     litm = 1
     print(litm,".", 'Calculating The Most Popular Stations and Trip...\n')
     litm = newmethod909(litm)
-    start_time = time.time()
+    start_time = newmethod505()
 
     # TO DO: display most commonly used start station
     popular_start = df['Start Station'].mode()[0]
@@ -191,7 +195,7 @@ def trip_duration_stats(df):
 
     print(litm,".",'Calculating Trip Duration...\n')
     litm = newmethod909(litm)
-    start_time = time.time()
+    start_time = newmethod505()
 
     # TO DO: display total travel time
     trip_total = df['Trip Duration'].sum()
@@ -211,7 +215,7 @@ def user_stats(df):
 
     litm = 1
     print(litm,".",'Calculating User Stats...\n')
-    start_time = time.time()
+    start_time = newmethod505()
     litm = newmethod909(litm)
 
     # TO DO: Display counts of user types
