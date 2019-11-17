@@ -116,19 +116,19 @@ def time_stats(df):
 
     print(litm,". ",'Calculating The Most Frequent Times of Travel...\n')
     start_time = time.time()    
-    litm = litm + 1
+    litm = newmethod909(litm)
 
     # TO DO: display the most common month
     common_month = df['month'].mode()[0]
     print(litm,". ", 'The most common month is: ', common_month)
-    litm = litm + 1
+    litm = newmethod909(litm)
 
     # TO DO: display the most common day of week
     common_day = df['day'].mode()[0]
 
     print(litm,".",'The most common day of week: ', common_day)
     #2
-    litm = litm + 1
+    litm = newmethod909(litm)
 
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
@@ -137,13 +137,21 @@ def time_stats(df):
     # TO DO: display the most common start hour
     popular_hour = df['hour'].mode()[0]
     print(litm,".","The the most common start hour " + str(popular_hour) + "h")
-    litm = litm + 1
+    litm = newmethod909(litm)
 
     print(litm,".","This took %s seconds." % (time.time() - start_time))
     #3
-    litm = litm + 1
+    litm = newmethod909(litm)
 
     print('-'*40)
+
+def newmethod909(litm):
+    litm = newmethod550(litm)
+    return litm
+
+def newmethod550(litm):
+    litm = litm + 1
+    return litm
         
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
@@ -151,24 +159,24 @@ def station_stats(df):
     #Display Line item = litm
     litm = 1
     print(litm,".", 'Calculating The Most Popular Stations and Trip...\n')
-    litm = litm + 1
+    litm = newmethod909(litm)
     start_time = time.time()
 
     # TO DO: display most commonly used start station
     popular_start = df['Start Station'].mode()[0]
     print(litm,".", 'The most commonly used start station is: ', popular_start)
-    litm = litm + 1
+    litm = newmethod909(litm)
 
     # TO DO: display most commonly used end station
     popular_end = df['End Station'].mode()[0]
     print(litm,".", 'The commonly used end station is: ', popular_end)
-    litm = litm + 1
+    litm = newmethod909(litm)
 
     # TO DO: display most frequent combination of start station and end station trip
     df['Start End'] = df['Start Station'] + ' and ' + df['End Station']
     popular_start_end = df['Start End'].value_counts().idxmax()
     print(litm,".",'The most frequent combination of start station and end station trip is:' , popular_start_end)
-    litm = litm + 1
+    litm = newmethod909(litm)
 
     print(litm,".","This took %s seconds." % (time.time() - start_time))           
     print("No more station stats available")
@@ -182,20 +190,20 @@ def trip_duration_stats(df):
     litm = 1
 
     print(litm,".",'Calculating Trip Duration...\n')
-    litm = litm + 1
+    litm = newmethod909(litm)
     start_time = time.time()
 
     # TO DO: display total travel time
     trip_total = df['Trip Duration'].sum()
     print(litm,".",'The total travel time is: ', trip_total)
-    litm = litm + 1
+    litm = newmethod909(litm)
     # TO DO: display mean travel time
     trip_mean = df['Trip Duration'].mean()
     print(litm,".",'The mean travel time is: ', trip_mean)
-    litm = litm + 1
+    litm = newmethod909(litm)
 
     print(litm,".","This took %s seconds." % (time.time() - start_time))
-    litm = litm + 1
+    litm = newmethod909(litm)
     print('-'*40)
 
 def user_stats(df):
@@ -204,21 +212,21 @@ def user_stats(df):
     litm = 1
     print(litm,".",'Calculating User Stats...\n')
     start_time = time.time()
-    litm = litm + 1
+    litm = newmethod909(litm)
 
     # TO DO: Display counts of user types
     user_types = pd.value_counts(df['User Type'])
     print(litm,".","User Types: \n", user_types)
-    litm = litm + 1
+    litm = newmethod909(litm)
 
     try:
         df_Gender_Type = df['Gender'].value_counts()
         print(litm,".",'Gender:\n')
-        litm = litm + 1
+        litm = newmethod909(litm)
 
         # convert nl presentable
         print('\t' + df_Gender_Type.to_string().replace('\n', '\n\t'))
-        litm = litm + 1
+        litm = newmethod909(litm)
 
     # If no data provided
     except Exception:
@@ -230,18 +238,18 @@ def user_stats(df):
         # Display earliest, most recent, and most common year of birth
         birth_earliest = int(df['Birth Year'].min())
         print(litm,".",'The earliest Birth Year is: ', birth_earliest)
-        litm = litm + 1                                                                                                                                                 
+        litm = newmethod909(litm)                                                                                                                                                 
         birth_mostrecent = int(df['Birth Year'].max())
         print(litm,".",'The most recent Birth Year is: ', birth_mostrecent)
-        litm = litm + 1
+        litm = newmethod909(litm)
         birth_mostcommon = int(df['Birth Year'].mode())
         print(litm,".",'The most common Birth Year is: ', birth_mostcommon)
-        litm = litm + 1
+        litm = newmethod909(litm)
 
         # If no data provided
     except Exception:
         print(litm,".","No date of birth data provided")
-        litm = litm + 1
+        litm = newmethod909(litm)
         pass # continue
 
     print('-'*40)
