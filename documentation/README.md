@@ -1,5 +1,5 @@
 # udacity
 pdsnd_github
-1. Edit README.md file alter after initial commit on Documentation branch, pass 3.
+1. Edit README.md as per project report section 3 ( Additional Changes to Documentation B & C) pass2 .
 
 
