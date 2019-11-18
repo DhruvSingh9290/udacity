@@ -8,6 +8,7 @@ As df.head() would print the first 5 lines of rows from df.
 
 similarly,you should define a display_data function, which should ask the user, " do you want to see raw data?" if user input yes, then it should show 5 lines of raw data. and again it should ask the user "do you want to see more 5 lines of raw data?" if yes user yes then it should again show further 5 line of raw data and this should be continuously going until the user gives input "No".
 Hint : use df.iloc()"""
+"""Note to include refacting"""
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
